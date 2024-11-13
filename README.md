@@ -2,7 +2,7 @@
 # React CRUD Application
 This is a simple React application demonstrating basic **CRUD operations** (Create, Read, Update, Delete) for managing user information. Users can be added, viewed in a list, edited, and deleted. The app fetches initial data from an API and updates the user list in real time.
 
-![App Screenshot] (./WhatsApp Image 2024-11-13 at 22.44.41_34b399f5.jpg)
+![App Screenshot](./appUI.jpg)
 
 
 ## Features
