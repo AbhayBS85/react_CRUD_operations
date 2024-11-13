@@ -22,33 +22,39 @@ const User = ({id,email,name,onDelete,onEdit}) =>{
     };
 
     return (
-        <div className="list">
+        <tr>
             {isEditing ? (
                 <>
-                    <input
-                        type="text"
-                        value={editedName}
-                        onChange={(e) => setEditedName(e.target.value)}
-                    />
-                    <input
-                        type="email"
-                        value={editedEmail}
-                        onChange={(e) => setEditedEmail(e.target.value)}
-                    />
-                    <button onClick={handleSave}>Save</button>
-                    <button onClick={() => setIsEditing(false)}>Cancel</button>
+                    <td>
+                        <input
+                            type="text"
+                            value={editedName}
+                            onChange={(e) => setEditedName(e.target.value)}
+                        />
+                    </td>
+                    <td>
+                        <input
+                            type="email"
+                            value={editedEmail}
+                            onChange={(e) => setEditedEmail(e.target.value)}
+                        />
+                    </td>
+                    <td>
+                        <button onClick={handleSave}>Save</button>
+                        <button onClick={() => setIsEditing(false)}>Cancel</button>
+                    </td>
                 </>
             ) : (
                 <>
-                    <span>{name}</span>
-                    <span>{email}</span>
-                    <span>
+                    <td>{name}</td>
+                    <td>{email}</td>
+                    <td>
                         <button onClick={handleEdit}>Edit</button>
                         <button onClick={handleDelete}>Delete</button>
-                    </span>
+                    </td>
                 </>
             )}
-        </div>
+        </tr>
     );
 };
 

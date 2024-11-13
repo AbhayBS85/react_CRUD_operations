@@ -94,18 +94,28 @@ const App=() =>{
       <h1>React JS CRUD Operations</h1>
       <br></br>
       <AddUser onAdd={onAdd}/>
-      <div>
-        {
-          users.map((user) =>(
-            <User 
-            id={user.id} 
-            key={user.id} 
-            name={user.name} 
-            email={user.email} 
-            onDelete={onDelete}
-            onEdit={onEdit} />
-          ))}
-      </div>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            users.map((user) =>(
+              <User 
+              id={user.id} 
+              key={user.id} 
+              name={user.name} 
+              email={user.email} 
+              onDelete={onDelete}
+              onEdit={onEdit} />
+            ))}
+        </tbody>
+        </table>
     </div>
   );
 }
