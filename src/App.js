@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import StudentList from './components/StudentList';
-import StudentForm from './components/StudentForm';
+import StudentForm from './components/User';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import User from './components/User';
 
 
 const App=() =>{
@@ -24,6 +24,13 @@ const App=() =>{
   return (
     <div className="App">
       <h1>React JS CRUD Operations</h1>
+      <div>
+        {
+          users.map((user) =>(
+            <User id={user.id} key={user.id} name={user.name} email={user.email}/>
+          ))
+        }
+      </div>
     </div>
   );
 }
